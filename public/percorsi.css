@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #090909;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 5%;
+}
+
+.site-header .logo {
+  font-weight: 900;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.site-header span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #999;
+}
+
+/* INTRODUZIONE */
+
+.explore {
+  padding: 35px 5% 80px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #999;
+}
+
+.intro h1 {
+  font-size: clamp(32px, 5vw, 72px);
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 24px 0;
+}
+
+.intro h1 span {
+  color: #aaa;
+}
+
+.intro > p:last-child {
+  color: #aaa;
+  font-size: 15px;
+}
+
+/* TRE PERCORSI */
+
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.path-card {
+  position: relative;
+  min-height: 470px;
+
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  background-color: #252525;
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.35s ease;
+}
+
+.path-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    transparent 25%,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.path-card:hover {
+  transform: translateY(-8px);
+}
+
+.path-content {
+  position: relative;
+  z-index: 1;
+  padding: 32px;
+}
+
+.path-content span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #bbb;
+}
+
+.path-content h2 {
+  font-size: 26px;
+  margin: 14px 0;
+}
+
+.path-content p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* IMMAGINI: DA SOSTITUIRE */
+
+.path-one {
+  background-image: url("/path1.jpg");
+}
+
+.path-two {
+  background-image: url("/path2.jpg");
+}
+
+.path-three {
+  background-image: url("/path3.jpg");
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 22px;
+  }
+
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .path-card {
+    min-height: 350px;
+  }
+
+  .explore {
+    padding: 30px 22px;
+  }
+}
