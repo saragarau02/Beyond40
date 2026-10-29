@@ -1,6 +1,9 @@
 /* HOMEPAGE */
 
 .homepage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   width: 100%;
   min-height: 100vh;
 
@@ -155,4 +158,58 @@ html {
   background-image:
     linear-gradient(transparent 40%, rgba(0, 0, 0, 0.85)),
     url("./assets/path3.jpg");
+}
+
+/* BARRA IN ALTO */
+
+.top-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 7%;
+}
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 3px;
+
+  padding: 12px 28px;
+  border: 1px solid white;
+
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: white;
+  color: black;
+}
+
+/* CONTATTI */
+
+.contacts {
+  padding: 90px 7%;
+  background: #090909;
+  color: white;
+  text-align: center;
+}
+
+.contacts h2 {
+  font-size: clamp(28px, 4vw, 50px);
+  letter-spacing: 4px;
+  margin: 0 0 20px;
+}
+
+.contacts a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.contacts a:hover {
+  color: white;
 }
